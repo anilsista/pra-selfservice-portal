@@ -10,17 +10,17 @@ app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: "anilsistahp@outlook.com",
-      pass: "Jagannadth$4",
-    },
-  });
+  service: 'gmail',
+  auth: {
+    user: "anilsistahp@outlook.com",
+    pass: "Jagannadth$4"
+  },
+});
   
-  contactEmail.verify((error) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Ready to Send");
-    }
-  });
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
